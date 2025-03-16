@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Price Table">
+    <meta name="keywords" content="HTML, CSS, Table">
+    <meta name="author" content="Stephanie Pascual">
+    <title>Products Prices</title>
+    <link rel="icon" type="image/x-icon" href="https://scontent.fmnl25-5.fna.fbcdn.net/v/t1.15752-9/482583453_9318313968258491_1990552421290073249_n.png?stp=dst-png_s480x480&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEh6-A2pJz7HjCf5IkxNEyTlqIPK8ThP3yWog8rxOE_fPHMrI5J16I9LttVyBYccSlpCedD0hsN-K78xx5W-mYU&_nc_ohc=hMpqt6r3u4cQ7kNvgEQYhoR&_nc_oc=AdijWNknFvX6LwmiYDRIsriFC3b1iXl_lvAduWzAhvQ1VwfLvLb5TKACwHyKYGvgqFw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl25-5.fna&oh=03_Q7cD1wH_msfsio-Epe-hD5Q9fEbv3wAyLrAq-hckU4bucZanCw&oe=67F1F393">
+    <style>
+        body {
+            font-family: "broadway", Elephant pro, century gothic;
+            background-image: url("https://scontent.fmnl25-2.fna.fbcdn.net/v/t1.15752-9/482731877_670118449013237_4164390447382006175_n.jpg?stp=dst-jpg_p526x395_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGeH7K3HQh6EIdT0iJeLYz-EbFle6yPL7URsWV7rI8vtQg-70kVCHFBvi24J72EXf7sktyeImI2v5G_Um_R6rjx&_nc_ohc=VfAFAK6K4SEQ7kNvgFJU6qh&_nc_oc=Adgr08Bbk_HMmyhfVfQrM5JQNjzPSnd21ATQdaVKDpvGa7OmYDyAyopKgtYz-1iJHzM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl25-2.fna&oh=03_Q7cD1wFYRCMpb6-t0Yz7I6YTpVtcee4JRneFot6Biw3f4WkPCw&oe=67F1E650");
+            background-size: cover;
+            color: #4b3900;
+            text-align: center;
+            padding: 50px;
+        }
+        .animated-button {
+            font-family: "broadway", Elephant pro, century gothic;
+            background-color: #ffcc70;
+            color: #4b3900;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin-top: 20px; /* Add margin to move the button away from the table */
+        }
+
+        .animated-button:hover {
+            background-color: #4b3900;
+            color: #ffcc70;
+            transform: scale(1.1);
+        }
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #ffcc70;
+            font-size: 20px;
+        }
+        th {
+            background-color: #ffcc70;
+            color: #4b3900;
+        }
+        td {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+<h1>Products Prices!</h1>
+
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Prices</th>
+    </tr>
+    <tr>
+        <td>King sized bedsheets</td>
+        <td>₱180</td>
+    </tr>
+    <tr>
+        <td>Queen sized bedsheets</td>
+        <td>₱180</td>
+    </tr>
+    <tr>
+        <td>Double sized bedsheets</td>
+        <td>₱170</td>
+    </tr>
+    <tr>
+        <td>Single sized bedsheets</td>
+        <td>₱130</td>
+    </tr>
+    <tr>
+        <td>Curtains (normal size) </td>
+        <td>₱180</td>
+    </tr>
+    <tr>
+        <td>Blanket</td>
+        <td>₱150</td>
+    </tr>
+    <tr>
+        <td>Pillow Case <b>medium</b></td>
+        <td>₱25 each <b>₱100 for 4 pcs.</b></td>
+    </tr>
+    <tr>
+        <td>Pillow Case <b>large</b></td>
+        <td>₱35 each <b>₱100 for 3 pcs</b></td>
+    </tr>
+    <tr>
+        <td>Pillow Case <b>extra large</b></td>
+        <td>₱50 each</td>
+    </tr>
+    <tr>
+        <td>Hotdog Pillow Case</td>
+        <td>₱50 each</td>
+    </tr>
+</table>
+
+<button class="animated-button" onclick="redirectToWebsite()">Go Back to the Page</button>
+
+<script>
+    function redirectToWebsite() {
+        window.location.href = "file:///C:/Users/LENOVO/Downloads/mybusiness.htm"; // Replace with your desired URL
+    }
+</script>
+
+</body>
+</html>
