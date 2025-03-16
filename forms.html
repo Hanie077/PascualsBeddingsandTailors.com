@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="icon" type="image/x-icon" href="https://scontent.fmnl25-5.fna.fbcdn.net/v/t1.15752-9/482583453_9318313968258491_1990552421290073249_n.png?stp=dst-png_s480x480&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEh6-A2pJz7HjCf5IkxNEyTlqIPK8ThP3yWog8rxOE_fPHMrI5J16I9LttVyBYccSlpCedD0hsN-K78xx5W-mYU&_nc_ohc=hMpqt6r3u4cQ7kNvgEQYhoR&_nc_oc=AdijWNknFvX6LwmiYDRIsriFC3b1iXl_lvAduWzAhvQ1VwfLvLb5TKACwHyKYGvgqFw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl25-5.fna&oh=03_Q7cD1wH_msfsio-Epe-hD5Q9fEbv3wAyLrAq-hckU4bucZanCw&oe=67F1F393">
+    <style>
+         body {
+            font-family: Broadway, Arial, Helvetica, sans-serif;
+            background-image: url("https://scontent.fmnl25-2.fna.fbcdn.net/v/t1.15752-9/482731877_670118449013237_4164390447382006175_n.jpg?stp=dst-jpg_p526x395_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGeH7K3HQh6EIdT0iJeLYz-EbFle6yPL7URsWV7rI8vtQg-70kVCHFBvi24J72EXf7sktyeImI2v5G_Um_R6rjx&_nc_ohc=VfAFAK6K4SEQ7kNvgFJU6qh&_nc_oc=Adgr08Bbk_HMmyhfVfQrM5JQNjzPSnd21ATQdaVKDpvGa7OmYDyAyopKgtYz-1iJHzM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl25-2.fna&oh=03_Q7cD1wFYRCMpb6-t0Yz7I6YTpVtcee4JRneFot6Biw3f4WkPCw&oe=67F1E650");
+            color: rgb(6, 56, 102);
+            text-align: center;
+            padding: 50px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+        }
+        div {
+            margin-bottom: 1em;
+        }
+        label {
+            margin-bottom: .5em;
+            color: #333333;
+            display: block;
+        }
+        input, select {
+            border: 1px solid #ccc;
+            padding: .5em;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 0.7em;
+            color: #fff;
+            background-color: #2d5886;
+            border: none;
+            border-radius: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #689ed8;
+        }
+        .success-message {
+            display: none;
+            color: green;
+            text-align: center;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<form id="order-form" action="https://formsubmit.co/el/docivo" method="POST">
+    <div>
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" required>
+    </div>
+    <div>
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" required>
+    </div>
+    <div>
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required>
+    </div>
+    <div>
+        <label for="contact-number">Contact Number</label>
+        <input type="tel" id="contact-number" name="contact-number" required>
+    </div>
+    <div>
+        <label for="design">Design</label>
+        <select id="design" name="design" required>
+            <option value="design1">#PCD01</option>
+            <option value="design2">#PCD02</option>
+            <option value="design3">#PCD03</option>
+            <option value="design4">#PCD04</option>
+            <option value="design5">#PCD05</option>
+            <option value="design6">#PCD07</option>
+            <option value="design7">#PCD08</option>
+            <option value="design8">#PCD09</option>
+            <option value="design9">#PCD10</option>
+            <option value="design10">#PCD11</option>
+            <option value="design12">#PCD12</option>
+            <option value="design13">#PCD13</option>
+            <option value="design14">#PCD14</option>
+            <option value="design15">#PCD15</option>
+            <option value="design16">#PCD16</option>
+            <option value="design17">#PCD17</option>
+            <option value="design18">#PCD18</option>
+            <option value="design19">#PCD19</option>
+            <option value="design20">#PCD20</option>
+            <option value="design21">#PCD21</option>
+        </select>
+    </div>
+    <div>
+        <label for="product">Product</label>
+        <select id="product" name="product" multiple required>
+            <option value="product1">Bedsheet</option>
+            <option value="product2">Pillow case</option>
+            <option value="product3">Curtains</option>
+            <option value="product4">Blanket</option>
+        </select>
+        <p>hold ctrl to select multiple</p>
+    </div>
+
+    <div>
+        <label for="size">Size</label>
+        <select id="size" name="size" required>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="single">Single</option>
+            <option value="double">Double</option>
+            <option value="queen">Queen</option>
+            <option value="king">King</option>
+        </select>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<div class="success-message" id="success-message">
+    Your form was successfully submitted to us! Thank you so much for ordering!
+</div>
+
+<script>
+    document.getElementById('order-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var form = event.target;
+        var data = new FormData(form);
+        fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                document.getElementById('success-message').style.display = 'block';
+                form.reset();
+            } else {
+                alert('There was a problem submitting your form');
+            }
+        }).catch(error => {
+            alert('There was a problem submitting your form');
+        });
+    });
+</script>
+
+</body>
+</html>
