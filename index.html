@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Bed accesories, bed designs">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Stephanie Pascual">
+    <title>Pascual's Beddings and Tailors!</title>
+    <link rel="icon" type="image/x-icon" href="https://scontent.fmnl25-5.fna.fbcdn.net/v/t1.15752-9/482583453_9318313968258491_1990552421290073249_n.png?stp=dst-png_s480x480&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEh6-A2pJz7HjCf5IkxNEyTlqIPK8ThP3yWog8rxOE_fPHMrI5J16I9LttVyBYccSlpCedD0hsN-K78xx5W-mYU&_nc_ohc=hMpqt6r3u4cQ7kNvgEQYhoR&_nc_oc=AdijWNknFvX6LwmiYDRIsriFC3b1iXl_lvAduWzAhvQ1VwfLvLb5TKACwHyKYGvgqFw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl25-5.fna&oh=03_Q7cD1wH_msfsio-Epe-hD5Q9fEbv3wAyLrAq-hckU4bucZanCw&oe=67F1F393">
+    <style>
+        body {
+            font-family: "broadway", Elephant pro, century gothic;
+            margin: 0;
+            padding: 0;
+            color: #4b3900;
+            text-align: center;
+            animation: fadeInUp 2s forwards;
+            background-image: url("https://scontent.fmnl25-2.fna.fbcdn.net/v/t1.15752-9/482731877_670118449013237_4164390447382006175_n.jpg?stp=dst-jpg_p526x395_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGeH7K3HQh6EIdT0iJeLYz-EbFle6yPL7URsWV7rI8vtQg-70kVCHFBvi24J72EXf7sktyeImI2v5G_Um_R6rjx&_nc_ohc=VfAFAK6K4SEQ7kNvgFJU6qh&_nc_oc=Adgr08Bbk_HMmyhfVfQrM5JQNjzPSnd21ATQdaVKDpvGa7OmYDyAyopKgtYz-1iJHzM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl25-2.fna&oh=03_Q7cD1wFYRCMpb6-t0Yz7I6YTpVtcee4JRneFot6Biw3f4WkPCw&oe=67F1E650");
+            animation: backgroundAnimation 5s animation-fill-mode;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        header, footer {
+            background: rgba(146, 219, 231, 0.9);
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold; 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #333;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background: rgba(146, 219, 231, 0.9);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background: rgba(146, 219, 231, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 2px solid #ffcc70;
+        }
+
+        .productt {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 2px solid #ffcc70;
+        }
+
+        .product img {
+            max-width: 300px;
+            border-radius: 20px;
+            margin-left: 90px;
+        }
+
+        .productt img {
+            max-width: 300px;
+            border-radius: 20px;
+            margin-left: 90px;
+        }
+
+        .product div {
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        .productt div {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .page-content {
+            padding: 20px;
+        }
+        .animated-button {
+            font-family: "broadway", Elephant pro, century gothic;
+            background-color: #ffcc70;
+            color: #4b3900;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin-top: 10px;
+        }
+
+        .animated-button:hover {
+            background-color: #4b3900;
+            color: #ffcc70;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Pascual's Beddings and Tailors!</h1>
+</header>
+
+<nav>
+    <a href="#home" onclick="showContent('home')">Home</a>
+    <a href="#best seller" onclick="showContent('best seller')">Best Seller</a>
+    <a href="#all designs" onclick="showContent('all designs')">All Designs</a>
+    <a href="#contacts" onclick="showContent('contact')">Contacts & Forms</a>
+    <a href="#aboutus" onclick="showContent('about')">About</a>
+</nav>
+
+<div class="container">
+    <div id="home" class="page-content">
+        <h2>Hello, welcome to our shop! We ensure that every product that you will get is the most strong and good product that you will ever receive.
+            For some information, every product that is from us is made of Canadian cotton which means there is a 99.9% rate that the fabric that we used will not fade its own color. 
+            We would want to hear about what you think about our product even if it is a bad review,
+            we are not going to take any complaints as an insult. In fact, we will take this as an opportunity to improve our service and our product. We promise that the product that you will get is in good condition! 
+        </h2>
+    </div>
+
+    <div id="best seller" class="page-content" style="display:none;">
+        <h2>Best Selling Products!</h2>
+        <p>(scroll see pricelist)</p>
+
+        <div class="product">
+            <img src="https://scontent.fcrk1-2.fna.fbcdn.net/v/t1.15752-9/484746775_623976840420758_2627939743872294545_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=nsYbL2alTfgQ7kNvgENsftr&_nc_oc=AdhmKAUDaegI62kNTEHIw3AAlvBxBHgFfvDNCrsKbIxOMUZfY1hJlmLyUuNTDZvDQdc&_nc_zt=23&_nc_ht=scontent.fcrk1-2.fna&oh=03_Q7cD1wFn6mV89RgAHEtJ3mKpSsL_KJfIWP2XHLhwc9Npv-jdxQ&oe=67FC9602" alt="green flower design">
+            <div>
+                <h3>Green Flowery Design</h3>
+                <p>Very nature design, and a very clean layout of the design with a nice color. Available with pillow case, blanket, curtains and bedsheet<br> <b> Available in all sizes! </b> <br>code: #PCD01</p>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.15752-9/482810527_638301625470068_3876885868236550112_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=-VUvgcCEcOwQ7kNvgEtG-JM&_nc_oc=AdirkcqciFlIJpTRlvPAmi-Fr8b8Qnj18a_gmNfIIhLaYc9DyhEO4JRCJvyWT2wpXRs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-3.fna&oh=03_Q7cD1wGzAdq7Am95_XXdNlnuLMBOvsXdpwNSrDP9jFbtIzgJSQ&oe=67FC9E5A" alt="pompompurin design">
+            <div>
+                <h3>Pompompurin Sanrio Character Design</h3>
+                <p>Childrens favorite! a cute and famous pompompurin is here! math your fluffy plushie pompompurin with our bedsheet set! Available with pillow case, blanket, curtains and bedsheet<br> <b> Available in all sizes! </b> <br>code: #PCD02</p>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t1.15752-9/484299961_1156767002761898_5050635504118926973_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=7fYGvWSdYFcQ7kNvgEpwe8p&_nc_oc=Adg_Fjr1AL62EWu1F0hpEHe642K3phf7wD-xcGO8vEo97WMF5sHKCkFR74lBHOrzzw8&_nc_zt=23&_nc_ht=scontent.fcrk1-4.fna&oh=03_Q7cD1wHpokKOYBr0-nq__zaaG3jDMRDu3IHxd1dQ0s_cV5iCOA&oe=67FCB753" alt="hello kitty design">
+            <div>
+                <h3>Hello Kitty Sanrio Character Design Pink</h3>
+                <p>A pink bedsheet for coquette and kikay girlies! This design is for pink favorites girlie! Available with pillow case, blanket, curtains and bedsheet<br> <b> Available in all sizes! </b> <br>code: #PCD03</p>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t1.15752-9/482990781_624676013891230_1049887414083287187_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=SyAYmn3HaLMQ7kNvgEp6d3b&_nc_oc=AdibxPwWAzofKiCFB_CYObllv3ioNHmNwHzSMfTaR6FhWx5War43YBEFouu_0-hJkXo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-4.fna&oh=03_Q7cD1wEkLOHyIO_MsbJY8VoiNbpp8qOzgOP2RPKGZIEc7lvASw&oe=67FC8E4B" alt="labubu character design">
+            <div>
+                <h3>Labubu Character Beige Design</h3>
+                <p>Very trendy and famous plushie is now on our design! Available with pillow case, blanket, curtains and bedsheet<br> <b> Available in all sizes! </b> <br>code: #PCD04</p>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://scontent.fcrk1-2.fna.fbcdn.net/v/t1.15752-9/483191694_994499882144563_8959390716359576899_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=M582rlUYAk0Q7kNvgG34XeZ&_nc_oc=Adhcvx5ZbYc4J3C-q4E9jGIhYA9k4A3sPLYrFSYVRbDqpwY2gDVXmyLWh471U97LezU&_nc_zt=23&_nc_ht=scontent.fcrk1-2.fna&oh=03_Q7cD1wGrQVaiVcV1eFjkD61XZG_k62XIAKqbD1fsbO6gq9JdRg&oe=67FCAD5C" alt="black floral design">
+            <div>
+                <h3>Black Floral Design</h3>
+                <p>A cute and nice dark floral! Available with pillow case, blanket, curtains and bedsheet<br> <b> Available in all sizes! </b> <br>code: #PCD05</p>
+            </div>
+        </div>
+        <button class="animated-button" onclick="myFunction()">Click to see prices!!</button>
+    </div>
+
+    <div id="all designs" class="page-content" style="display:none;">
+        <h2>All Designs</h2>
+        <p>Here you can find all our available designs! </p>
+        <div class="productt">
+            <img src="https://scontent.fcrk1-2.fna.fbcdn.net/v/t1.15752-9/484746775_623976840420758_2627939743872294545_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=nsYbL2alTfgQ7kNvgENsftr&_nc_oc=AdhmKAUDaegI62kNTEHIw3AAlvBxBHgFfvDNCrsKbIxOMUZfY1hJlmLyUuNTDZvDQdc&_nc_zt=23&_nc_ht=scontent.fcrk1-2.fna&oh=03_Q7cD1wFn6mV89RgAHEtJ3mKpSsL_KJfIWP2XHLhwc9Npv-jdxQ&oe=67FC9602" alt="green flower design">
+            <div>
+                    <p>Code #PCD01</p>
+                </div>
+                <div>
+                <img src="https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.15752-9/482810527_638301625470068_3876885868236550112_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=-VUvgcCEcOwQ7kNvgEtG-JM&_nc_oc=AdirkcqciFlIJpTRlvPAmi-Fr8b8Qnj18a_gmNfIIhLaYc9DyhEO4JRCJvyWT2wpXRs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-3.fna&oh=03_Q7cD1wGzAdq7Am95_XXdNlnuLMBOvsXdpwNSrDP9jFbtIzgJSQ&oe=67FC9E5A" alt="pompompurin design">
+                </div>
+                <div>
+                    <p>Code #PCD02</p>
+                </div>
+            </div>
+
+    <div class="productt">
+        <img src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t1.15752-9/484299961_1156767002761898_5050635504118926973_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=7fYGvWSdYFcQ7kNvgEpwe8p&_nc_oc=Adg_Fjr1AL62EWu1F0hpEHe642K3phf7wD-xcGO8vEo97WMF5sHKCkFR74lBHOrzzw8&_nc_zt=23&_nc_ht=scontent.fcrk1-4.fna&oh=03_Q7cD1wHpokKOYBr0-nq__zaaG3jDMRDu3IHxd1dQ0s_cV5iCOA&oe=67FCB753" alt="hello kitty design">
+        <div>
+                <p>Code #PCD03</p>
+            </div>
+            <div>
+            <img src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t1.15752-9/482990781_624676013891230_1049887414083287187_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=SyAYmn3HaLMQ7kNvgEp6d3b&_nc_oc=AdibxPwWAzofKiCFB_CYObllv3ioNHmNwHzSMfTaR6FhWx5War43YBEFouu_0-hJkXo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-4.fna&oh=03_Q7cD1wEkLOHyIO_MsbJY8VoiNbpp8qOzgOP2RPKGZIEc7lvASw&oe=67FC8E4B" alt="labubu character design">
+            </div>
+            <div>
+                <p>Code #PCD04</p>
+            </div>
+        </div>
+
+<div class="productt">
+    <img src="https://scontent.fcrk1-2.fna.fbcdn.net/v/t1.15752-9/483191694_994499882144563_8959390716359576899_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=M582rlUYAk0Q7kNvgG34XeZ&_nc_oc=Adhcvx5ZbYc4J3C-q4E9jGIhYA9k4A3sPLYrFSYVRbDqpwY2gDVXmyLWh471U97LezU&_nc_zt=23&_nc_ht=scontent.fcrk1-2.fna&oh=03_Q7cD1wGrQVaiVcV1eFjkD61XZG_k62XIAKqbD1fsbO6gq9JdRg&oe=67FCAD5C" alt="black floral design">
+    <div>
+            <p>Code #PCD05</p>
+        </div>
+        <div>
+        <img src="https://scontent.fcrk1-5.fna.fbcdn.net/v/t1.15752-9/484290510_886105016887336_7831671926935293534_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=LPOQ9Nnu_qwQ7kNvgHTWcpt&_nc_oc=AdhtealOKHw7-x2QMnf6Wz0q-Jv6OOuFNSnTnGVr3ZvwRsiLw53RFrZSMP0iOuSyz6E&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-5.fna&oh=03_Q7cD1wGrwXRd8BMxhDZ8jdweFwPk4UkNWHuwpLZgPeN0Nd3vLQ&oe=67FCABB8" alt="kuromi design">
+        </div>
+        <div>
+            <p>Code #PCD06</p>
+        </div>
+    </div>
+
+<div class="productt">
+    <img src="https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.15752-9/483383131_1451896272449756_3856595043222935167_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=WlJ9Wx2QcrEQ7kNvgF_HPL6&_nc_oc=AdjiRh7Hq7XDKv-Fwr_3SLDJ2qcWG4Pc5lyIv8e_OBrqrASY9MjIS0BH26XU0Op2Cv4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-3.fna&oh=03_Q7cD1wH04XFqodso_-FlP8HLIWf4Cz9zeyy56x1ba9yzysawjg&oe=67FCB772" alt="labubu 2">
+    <div>
+            <p>Code #PCD07</p>
+        </div>
+        <div>
+        <img src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t1.15752-9/483504297_2433144450351520_4397503622622804990_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=FRup4toopZAQ7kNvgHp-KKS&_nc_oc=Adh47oebl8OyxMcaAWg_eCj_ZH2EpUzFrUiVXvQP0-FqOXZQEDHs9Eq9OzsOisWzWoA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-4.fna&oh=03_Q7cD1wGYeGZ5qKi87htQDz8vYixrYHwQCdFFJQwbMI-apXYyYw&oe=67FCC02D" alt="spiderman design">
+        </div>
+        <div>
+            <p>Code #PCD08</p>
+        </div>
+    </div>
+
+<div class="productt">
+    <img src="https://scontent.fcrk1-1.fna.fbcdn.net/v/t1.15752-9/483302546_942461394635552_7701680018395833693_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=DJuBdP94oQAQ7kNvgGAmEqR&_nc_oc=AdjUJvQDF5tYgBpCnW1YUIReNmx7UnaWa15ve8TdpGB7GRXPBcvlZJWWbg3P8iypOpA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-1.fna&oh=03_Q7cD1wHwLHwVNCDaRzlcnqobojfHomKGDihgCXqr4InhBeM2sA&oe=67FCB06B" alt="kuromi design 2">
+    <div>
+            <p>Code #PCD09</p>
+        </div>
+        <div>
+        <img src="https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.15752-9/484280238_542325398371060_1348268448582993338_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=pfQ1mHcBkoIQ7kNvgGs409z&_nc_oc=Adg6gCmVHgP9wm-eBxAf8TOwrZl7wMk_4firi9HOlkMp4WjtybW1_l0D7gAqN3jgCTM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-3.fna&oh=03_Q7cD1wEZ0oY51d1TiHpouqyDllJ1GmKZ-xU0LvrVLSyT3j6DPA&oe=67FCD356" alt="blue cinnamoroll design">
+        </div>
+        <div>
+            <p>Code #PCD10</p>
+        </div>
+    </div>
+
+<div class="productt">
+    <img src="https://scontent.fcrk1-1.fna.fbcdn.net/v/t1.15752-9/483858707_1349190382890670_6706798334012237229_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Z_wh6xhSvHgQ7kNvgEACZej&_nc_oc=AdjvUDqHz9pPOA8AAtTadvi3s6lTG7ULH5Fpx1rtjsABm7yM4frT4HW76qlIgF8UdsY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-1.fna&oh=03_Q7cD1wEwvjaIQ0dQ1_Ly3fXQ0GoO6OzPwuSOm1dBtb09FbR6kw&oe=67FCAE38" alt="cat design">
+    <div>
+            <p>Code #PCD11</p>
+        </div>
+        <div>
+        <img src="https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.15752-9/483338980_2033778283799651_3095618313758168502_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=O3-2IN3y_RIQ7kNvgFTfMbY&_nc_oc=AdjpP1wfOIDFinxjgKbvAT66vr8-o3b_BMZ6zdadQLDSNI90QPb_nPu4vKQp7Yg8Dus&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-3.fna&oh=03_Q7cD1wEORTea3ULgnTMX75RyFhxKn_-GtABSVIcva8BX81iJMw&oe=67FCC55D" alt="hello kitty 2 design">
+        </div>
+        <div>
+            <p>Code #PCD12</p>
+        </div>
+    </div>
+
+<div class="productt">
+    <img src="https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.15752-9/483383131_1451896272449756_3856595043222935167_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=WlJ9Wx2QcrEQ7kNvgF_HPL6&_nc_oc=AdjiRh7Hq7XDKv-Fwr_3SLDJ2qcWG4Pc5lyIv8e_OBrqrASY9MjIS0BH26XU0Op2Cv4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-3.fna&oh=03_Q7cD1wH04XFqodso_-FlP8HLIWf4Cz9zeyy56x1ba9yzysawjg&oe=67FCB772" alt="pink floral design">
+    <div>
+            <p>Code #PCD13</p>
+        </div>
+        <div>
+        <img src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t1.15752-9/483330610_654964873748650_4643925804437429092_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=iwOyoHk46okQ7kNvgHHyIK4&_nc_oc=AdjHWs7_eyxeLlazhiilB9KRuaHhD2k-99-BCXVjkvY3_d3iT6SYVERCf5w2WxVzlP8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-4.fna&oh=03_Q7cD1wG4xmD3MmeJ_r2NX8UwYa8SzRVtLUlqM1oMFukFgO1JGQ&oe=67FCBACF" alt="black leaves design design">
+        </div>
+        <div>
+            <p>Code #PCD14</p>
+        </div>
+    </div>
+
+<div class="productt">
+    <img src="https://scontent.fcrk1-1.fna.fbcdn.net/v/t1.15752-9/483011804_1361309235289345_3102098963363912769_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=amO85Ow4nqoQ7kNvgEgmNJ-&_nc_oc=AdiIvcAPpuMv-1egOpwOiKIngLVLVtoxKpMXSwpqa5YQtnrTdYdTf12hWIiEhuFv13E&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-1.fna&oh=03_Q7cD1wF90H6gzneg-xYV3s21ylD7__6FeIr69AEH-gbBDi70Gg&oe=67FCB7B6" alt="green floral design">
+    <div>
+            <p>Code #PCD16</p>
+        </div>
+        <div>
+        <img src="https://scontent.fcrk1-2.fna.fbcdn.net/v/t1.15752-9/483333434_617463307930607_8014837157816151037_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Sfel4xAQ0ogQ7kNvgG9vY7R&_nc_oc=Adgs1NjND1XVQa-4xOPbZK8zUmJMEtOvxg1kOwmgZMP_20yYM9Sr5Ic56dFPySQdUIY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-2.fna&oh=03_Q7cD1wGrtpAybR6JViE0Yx8K1JUDs7urNBxOHvMR7ItWYBTqWA&oe=67FCD47D" alt="pink little flowers design">
+        </div>
+        <div>
+            <p>Code #PCD17</p>
+        </div>
+    </div>
+
+<div class="productt">
+    <img src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t1.15752-9/484731018_1272115733850917_7191858050262471577_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=aJKh1jSORfsQ7kNvgGp8D0M&_nc_oc=Adg_vXxsOSZigbx_nxtD5ovKGLz24hBqB6gWFYxPGIhw-DLwirrQC_AplNpNDrNrh1s&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-4.fna&oh=03_Q7cD1wFWSvIg3vqzJODvOBwGBQGhcggC6kfpLXZhCS-ldeoRvQ&oe=67FCBF10" alt="pink stars design">
+    <div>
+            <p>Code #PCD18</p>
+        </div>
+        <div>
+        <img src="https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.15752-9/483137155_1330666978146175_2187558945496783264_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=tUt-rPaDhgwQ7kNvgFIHDms&_nc_oc=Adi2HL2cHmYcoAjqLnqyK7q1WssvEQF_OWc7JZ86ZstUWf3o-eE1KU83m1VwhpfvUpo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-3.fna&oh=03_Q7cD1wEZGN66OoeFvkW_B1Lq5QjafcOd7SsSaMwjRD_lJQiUZA&oe=67FCC39E" alt="green abstract design">
+        </div>
+        <div>
+            <p>Code #PCD19</p>
+        </div>
+    </div>
+
+<div class="productt">
+    <img src="https://scontent.fcrk1-2.fna.fbcdn.net/v/t1.15752-9/483338730_1182236449958701_9100898944610292753_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=t1OZmk6koWQQ7kNvgGNlt4_&_nc_oc=Adh7EKxcXssMVYdk4Okwtu7SQvtp1Rs5jreyrTmsP40Cv5oAN5yxBq39uMKVtVnGe0k&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-2.fna&oh=03_Q7cD1wFPdAb9aE5jfWqdcg0F5R2tlYWWZEtY3Nj2SoEuxWWF0w&oe=67FCA92D" alt="black space design">
+    <div>
+            <p>Code #PCD20</p>
+        </div>
+        <div>
+        <img src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t1.15752-9/483362641_631188262860456_4929701094568333082_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IVR-5N_QPaMQ7kNvgEdRYyP&_nc_oc=AdjF4Kcny62sQj_YneveFImZt215APBAS-4L6Bsbc4y1C3HwpXnDcIRGNs6JtsBH-ps&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-4.fna&oh=03_Q7cD1wEz8WoPXQL64ynYxLbdVyqKb8XjrHHVNydIaLDMHco-Lg&oe=67FCCC6D" alt="white and blue abstract design">
+        </div>
+        <div>
+            <p>Code #PCD21</p>
+        </div>
+    </div>
+
+<div class="productt">
+    <img src="https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.15752-9/484160987_1294932464903416_4174122075810900697_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=b43W1JeJbmkQ7kNvgHEfi-u&_nc_oc=AdjUV7SliraZ5Y5L7GA7GzuN8ZDKS-Zze7jj5-9OGcRv99zX0OI-iqiL4PK0p1aDbIA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-3.fna&oh=03_Q7cD1wGhLEIXbZPlsS-QYKRzyDv4OjINyAtQ3GA6n1IgYeTc3g&oe=67FCB7DD" alt="gray and white abstract design">
+    <div>
+            <p>Code #PCD22</p>
+        </div>
+        <div>
+        <img src="https://scontent.fcrk1-1.fna.fbcdn.net/v/t1.15752-9/482813290_655769897416182_5334247043846458219_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=tf83rtUA4eMQ7kNvgEGtDzA&_nc_oc=AdimQCNT_-huMJyKsVJerEHwtZuebnfuPYmHKxCssHOjhO6nm-EPDxMFNjCI78ppIJw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcrk1-1.fna&oh=03_Q7cD1wFIsdch7_zNAnZ8JJMzvegd39uWZkm53GR-iy5_CKHLlQ&oe=67FCE37F" alt="blue abstract design">
+        </div>
+        <div>
+            <p>Code #PCD23</p>
+        </div>
+    </div>
+    </div>
+
+
+    <div id="contact" class="page-content" style="display:none;">
+        <h2>Contacts & Forms!</h2>
+        <ul>
+            <li>Phone: 0955-045-3337</li>
+            <li>Email:  hanie.pascual.432@gmail.com</li>
+            <li>Address: Sto Cristo Sur, Gapan City, Nueva Ecija</li>
+        </ul>
+        <button class="animated-button" onclick="redirectToWebsite(form)">Click to fill up forms!!</button>
+    </div>
+    
+
+    <div id="about" class="page-content" style="display:none;">
+        <h2>Our shop is a family business. Our Parents started it around 2007. They started by just working at a factory that does tailoring.<br> Later on, they decided to build their own business and until now, their business is still on going.</h2>
+        <p>Hello! Every fabric that is used to create each product is made from canadian cotton, We have plenty of new designs as time pass by. <br> Our prices are always affordable and prices are according to the performances of our product. <br> we can assure you that our product is very worth it. Don't miss out, BUY NOWW!!! &#1F60D &#1F604</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; Pascual's Tailors and Beddings | "Sew perfect, sleep better!"</p>
+</footer>
+
+<script>
+    function showContent(page) {
+        document.querySelectorAll('.page-content').forEach(content => {
+            content.style.display = 'none';
+        });
+        document.getElementById(page).style.display = 'block';
+    }
+
+    function myFunction() {
+        window.location.href = "file:///C:/Users/LENOVO/Downloads/tableprice.htm"; 
+    }
+
+    function redirectToWebsite(form) {
+        window.location.href = "file:///C:/Users/LENOVO/Downloads/orderform.htm"; 
+    }
+</script>
+
+</body>
+</html>
