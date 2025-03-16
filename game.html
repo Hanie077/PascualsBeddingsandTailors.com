@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix the Bed Game</title>
+    <style>
+        body {
+            background-image: url('https://scontent.fmnl25-2.fna.fbcdn.net/v/t1.15752-9/482731877_670118449013237_4164390447382006175_n.jpg?stp=dst-jpg_p526x395_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGeH7K3HQh6EIdT0iJeLYz-EbFle6yPL7URsWV7rI8vtQg-70kVCHFBvi24J72EXf7sktyeImI2v5G_Um_R6rjx&_nc_ohc=VfAFAK6K4SEQ7kNvgFJU6qh&_nc_oc=Adgr08Bbk_HMmyhfVfQrM5JQNjzPSnd21ATQdaVKDpvGa7OmYDyAyopKgtYz-1iJHzM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl25-2.fna&oh=03_Q7cD1wFYRCMpb6-t0Yz7I6YTpVtcee4JRneFot6Biw3f4WkPCw&oe=67F1E650');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #game-container {
+            text-align: center;
+            background: rgba(255, 227, 227, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+        }
+        #bed-image {
+            width: 300px;
+            height: 200px;
+        }
+        .button {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #shop-button {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Fix the Bed Game</h1>
+        <img id="bed-image" src="https://c.stocksy.com/a/tm3F00/z9/3589483.jpg" alt="Messy Bed">
+        <div>
+            <button class="button" id="button1">Fix the Bed</button>
+            <button class="button" id="button2">Fix the Bed</button>
+        </div>
+        <p id="message"></p>
+        <button id="shop-button" onclick="goToShop()">Go back to the shop</button>
+    </div>
+
+    <script>
+        let round = 1;
+        const totalRounds = 3;
+        const bedImage = document.getElementById('bed-image');
+        const message = document.getElementById('message');
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+        const shopButton = document.getElementById('shop-button');
+
+        function resetGame() {
+            round = 1;
+            bedImage.src = 'https://i.pinimg.com/originals/dd/75/ec/dd75ec642d7ac212e55d5df3b81d9b82.jpg';
+            message.textContent = '';
+            shopButton.style.display = 'none';
+            button1.style.display = 'inline-block';
+            button2.style.display = 'inline-block';
+            assignButtons();
+        }
+
+        function resetGame() {
+            round = 2;
+            bedImage.src = 'https://c.stocksy.com/a/UB3F00/z9/3587164.jpg';
+            message.textContent = '';
+            shopButton.style.display = 'none';
+            button1.style.display = 'inline-block';
+            button2.style.display = 'inline-block';
+            assignButtons();
+        }
+
+        function assignButtons() {
+            const correctButton = Math.random() < 0.5 ? button1 : button2;
+            const wrongButton = correctButton === button1 ? button2 : button1;
+
+            correctButton.onclick = () => {
+                if (round <= totalRounds) {
+                    bedImage.src = 'https://scontent.fcrk1-2.fna.fbcdn.net/v/t1.15752-9/484746775_623976840420758_2627939743872294545_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=nsYbL2alTfgQ7kNvgENsftr&_nc_oc=AdhmKAUDaegI62kNTEHIw3AAlvBxBHgFfvDNCrsKbIxOMUZfY1hJlmLyUuNTDZvDQdc&_nc_zt=23&_nc_ht=scontent.fcrk1-2.fna&oh=03_Q7cD1wFn6mV89RgAHEtJ3mKpSsL_KJfIWP2XHLhwc9Npv-jdxQ&oe=67FC9602';
+                    message.textContent = `Round ${round} completed!`;
+                    round++;
+                    if (round > totalRounds) {
+                        message.textContent = 'Congratulations! You fixed the bed in all rounds!';
+                        button1.style.display = 'none';
+                        button2.style.display = 'none';
+                    } else {
+                        bedImage.src = 'https://c.stocksy.com/a/UB3F00/z9/3587164.jpg';
+                        assignButtons();
+                    }
+                }
+            };
+
+            wrongButton.onclick = () => {
+                message.textContent = 'Sorry, you lose!';
+                button1.style.display = 'none';
+                button2.style.display = 'none';
+                shopButton.style.display = 'inline-block';
+            };
+        }
+
+        shopButton.addEventListener('click', resetGame);
+
+        assignButtons();
+
+        function goToShop() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
